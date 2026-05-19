@@ -20,10 +20,10 @@ return new class extends Migration
             $table->timestamps();
 
             //Atributos foraneos
-            $table->unsignedBigInteger('training_centers_id')->nullable();
+            $table->unsignedBigInteger('training_center_id')->nullable();
 
            //referenciando la tabla users
-            $table->foreign('training_centers_id')
+            $table->foreign('training_center_id')
             ->references('id')
             ->on('training_centers')->onDelete('set null');
 
